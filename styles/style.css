@@ -1,0 +1,20 @@
+html, body {
+    height: 100vh;
+}
+
+/* Grid Border */
+#grid-container {
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+.grid-row {
+    flex: 1 1 auto;
+}
+
+.grid-column {
+    border: 1px solid green;
+    height: 45px;
+
+}
