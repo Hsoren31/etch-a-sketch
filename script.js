@@ -6,7 +6,7 @@ function makeGrid(rowNum, columnNum){
         const row = document.createElement('div');
         row.className = 'grid-row';
         gridContainer.appendChild(row);
-
+    
         for(j = 0; j < columnNum; j++){
             const column = document.createElement('div');
             column.className = 'grid-column';
@@ -16,3 +16,12 @@ function makeGrid(rowNum, columnNum){
 }
 
 makeGrid(16, 16);
+
+//Hover event
+const cells = document.querySelectorAll("div.grid-column");
+
+cells.forEach((cell) => {
+    cell.addEventListener("mouseover", () => {
+        cell.style.backgroundColor = 'black';
+    })
+});
