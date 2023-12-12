@@ -1,10 +1,15 @@
-//Button
+//Buttons
 const gridButton = document.querySelector('#grid-size');
 
-gridButton.onclick = function(){
-    let gridPrompt = prompt("How many squares per side of the grid would you like?");
-    makeGrid(gridPrompt);
-    colorMe();
+gridButton.onclick = () => {
+    let gridPrompt = prompt("How many squares per side of the grid would you like? (2 -75)");
+        if(gridPrompt < 75 && gridPrompt > 1){
+            makeGrid(gridPrompt);
+            colorMe();
+        } else {
+            alert("Not an acceptable number.")
+        }
+    gridButton.disabled = true;
 };
 
 //Make Grid
@@ -27,7 +32,6 @@ function makeGrid(num){
 //Fill in boxes
 function colorMe(){
     const cells = document.querySelectorAll("div.grid-column");
-    console.log(cells);
 
     cells.forEach((cell) => {
         cell.addEventListener("mouseover", () => {
