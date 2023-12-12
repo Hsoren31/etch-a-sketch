@@ -4,16 +4,17 @@ html, body {
 
 /* Grid Border */
 #grid-container {
-    
+    max-width: 650px;
+    min-height: 650px;
     display: flex;
-    justify-content: space-evenly;
-    align-content: space-evenly;
 }
 .grid-row {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .grid-column {
     border: 1px solid black;
-    height: 45px;
+    flex: 1 1 auto;
 }
